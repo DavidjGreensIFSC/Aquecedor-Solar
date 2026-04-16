@@ -1,61 +1,269 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+  <!-- META BASE -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aquecedor de Água Sustentável</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#2B7A54">
+
+  <!-- SEO -->
+  <title>Aquecedor Solar | IFSC Chapecó</title>
+  <meta name="description"
+    content="Sistema de aquecimento de água por energia solar instalado no IFSC Chapecó. Utiliza tubos a vácuo para aquecimento eficiente e sustentável." />
+  <meta name="keywords" content="aquecedor solar, energia solar, termossifão, IFSC, sustentabilidade" />
+  <meta name="author" content="IFSC Chapecó" />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Aquecedor Solar IFSC" />
+  <meta property="og:description" content="Sistema sustentável de aquecimento de água com energia solar." />
+  <meta property="og:image" content="assets/img/img-aquecedor-agua.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- FAVICON -->
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+
+  <!-- FONTE -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
-  <div class="page">
-    <header>
-      <div class="brand">
-        <img src="assets/IFSC_horizontal_marca2015_PNG (1) - Editado.png" alt="Logo IFSC" class="brand-logo" />
-      </div>
 
-      <nav aria-label="Navegação principal">
-        <a class="nav-link active" href="index.html">Início</a>
-        <a class="nav-link" href="funcionamento.html">Funcionamento</a>
-        <a class="nav-link" href="equipe.html">Equipe</a>
-      </nav>
-    </header>
-
-    <section class="hero">
-      <div class="hero-left">
-        <article class="card large">
-          <img src="assets/Foto do aquecedor de água sustentável montado no campus.png" alt="Foto do aquecedor de água sustentável montado no campus" />
-        </article>
-
-        <article class="card small-card">
-          <img src="assets/Ilustração técnica do sistema de aquecimento solar.png" alt="Ilustração técnica do sistema de aquecimento solar" />
-        </article>
-      </div>
-
-      <div class="hero-right">
-        <div class="content" id="inicio">
-          <span class="eyebrow">Aquecedor de água sustentável</span>
-          <h1>Projeto IFSC Campus Chapecó com energia solar e cobre</h1>
-          <p>
-            Este projeto foi desenvolvido no IFSC Campus Chapecó com o objetivo de criar uma solução eficiente e acessível para o aquecimento de água, utilizando energia solar e condução térmica em cobre.
-          </p>
-        <p>
-          O sistema capta o calor do sol e o transfere para a água por meio de materiais altamente condutores, permitindo um aquecimento rápido, econômico e sustentável.
-        </p>
-        <p>
-          Além disso, o projeto possibilita o controle da temperatura, garantindo maior segurança e eficiência no uso.
-        </p>
-
-        <div class="feature-list">
-          <div class="feature">Energia limpa e renovável</div>
-          <div class="feature">Tubulação em cobre para alta condutividade</div>
-          <div class="feature">Baixo custo operacional</div>
-        </div>
-      </div>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-bar-content">
+      <span class="badge">Novo</span>
+      <p>Projeto de Inovação Sustentável - IFSC Campus Chapecó 2026</p>
     </div>
-    </section>
-
+    <div class="top-bar-links">
+      <a href="#funcionamento">Saiba mais</a>
+    </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-container glass-panel">
+
+      <a href="" class="brand" onclick="location.reload(); return false;">
+        <strong>IFSC</strong> Chapecó
+      </a>
+
+      <nav class="main-nav">
+        <a href="#hero" class="nav-link active">Visão Geral</a>
+        <a href="#funcionamento" class="nav-link">Funcionamento</a>
+        <a href="#bento-features" class="nav-link">Benefícios</a>
+      </nav>
+
+      <a href="#funcionamento" class="btn-primary">Ver sistema</a>
+
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- HERO -->
+    <section id="hero" class="hero section-padding">
+      <div class="container hero-grid">
+
+        <div class="hero-text reveal">
+          <span class="eyebrow">Energia Limpa & Eficiência</span>
+
+          <h1>
+            Água quente todos os dias.<br>
+            <span class="highlight">Sem custo. Sem impacto.</span>
+          </h1>
+
+          <p>
+            Sistema de aquecimento solar instalado no IFSC Campus Chapecó, que utiliza
+            tubos a vácuo para captar energia térmica do sol e aquecer a água de forma
+            eficiente, reduzindo significativamente o consumo de energia elétrica.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#funcionamento" class="btn-primary">Como funciona</a>
+            <a href="#bento-features" class="btn-secondary">Ver vantagens</a>
+          </div>
+        </div>
+
+        <div class="hero-visuals reveal delay-1">
+          <div class="image-wrapper main-image parallax-img">
+            <img src="assets/img/img-aquecedor-agua.png" alt="Sistema de aquecimento solar instalado" loading="lazy"
+              onerror="this.src='https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=800&q=80'" />
+          </div>
+
+          <div class="stats-card glass-panel floating-card">
+            <span class="stats-value">100%</span>
+            <span class="stats-label">Sustentável</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FUNCIONAMENTO -->
+    <section id="funcionamento" class="section-padding">
+      <div class="container text-center reveal">
+
+        <h2>Como o sistema funciona</h2>
+
+        <p>
+          O sistema utiliza tubos a vácuo que captam a radiação solar e transformam
+          em energia térmica, aquecendo a água de forma eficiente.
+        </p>
+
+        <p>
+          Ao atingir temperaturas mais elevadas, a água quente sobe naturalmente para o
+          reservatório térmico (boiler), enquanto a água fria desce, formando um ciclo
+          contínuo conhecido como termossifão.
+        </p>
+
+        <p>
+          O sistema também possui uma central de controle de temperatura, permitindo
+          definir limites seguros para o uso da água aquecida.
+        </p>
+
+        <!-- VIDEO -->
+        <div class="video-wrapper">
+          <iframe width="100%" height="400" src="https://www.youtube.com/embed/EGry9YHDyhs"
+            title="Funcionamento do aquecimento solar" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <!-- INFO CARDS -->
+        <div class="info-grid">
+
+          <div class="info-card">
+            <i class="fa-solid fa-sun"></i>
+            <h4>Tubos a vácuo</h4>
+            <p>Captam e retêm calor com alta eficiência térmica.</p>
+          </div>
+
+          <div class="info-card">
+            <i class="fa-solid fa-water"></i>
+            <h4>Boiler</h4>
+            <p>Armazena a água aquecida para uso contínuo.</p>
+          </div>
+
+          <div class="info-card">
+            <i class="fa-solid fa-temperature-half"></i>
+            <h4>Controle térmico</h4>
+            <p>Permite ajustar limites de temperatura com segurança.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section id="bento-features" class="bento-section section-padding">
+      <div class="container">
+
+        <div class="section-heading text-center reveal">
+          <h2>Por que utilizar este sistema?</h2>
+          <p>Eficiência energética aliada à sustentabilidade.</p>
+        </div>
+
+        <div class="bento-grid reveal delay-1">
+
+          <div class="bento-item glass-panel span-2">
+            <h3>Alta Eficiência Térmica</h3>
+            <p>
+              Os tubos a vácuo reduzem perdas de calor e garantem excelente desempenho,
+              mesmo com baixa incidência solar.
+            </p>
+          </div>
+
+          <div class="bento-item glass-panel bg-copper">
+            <div class="icon-box">
+              <i class="fa-solid fa-shower"></i>
+            </div>
+
+            <h3>Economia de Energia</h3>
+
+            <p>
+              O chuveiro pode representar até <strong><span class="badge-highlight">30%</span> da conta de luz</strong>.
+              Com o aquecedor solar, quem aquece a água é o <strong>Sol</strong> — não a energia elétrica.
+            </p>
+          </div>
+
+          <div class="bento-item glass-panel">
+            <h3>Durabilidade</h3>
+            <p>Equipamento resistente com baixa necessidade de manutenção.</p>
+          </div>
+
+          <div class="bento-item glass-panel span-2 flex-row">
+
+            <div class="bento-text">
+              <span class="eyebrow">Controle</span>
+              <h3>Segurança térmica</h3>
+              <p>
+                Sistema com controle de temperatura que garante segurança e conforto
+                no uso diário.
+              </p>
+            </div>
+
+            <div class="bento-img-small parallax-img">
+              <img src="assets/img/seletor.png" alt="Controle de temperatura" loading="lazy"
+                onerror="this.src='https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&w=400&q=80'" />
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <strong>IFSC Chapecó</strong>
+        <p>Aplicando inovação e sustentabilidade no cotidiano.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#hero">Início</a></li>
+          <li><a href="funcionamento.html">Funcionamento</a></li>
+          <li><a href="#bento-features">Benefícios</a></li>
+          <li><a href="equipe.html">Equipe</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Projeto</h4>
+        <ul>
+          <li><a href="#">Documentação</a></li>
+          <li><a href="#">Esquema técnico</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 IFSC Chapecó</p>
+    </div>
+
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/js/script.js"></script>
+
 </body>
+
 </html>
