@@ -106,10 +106,10 @@ Desenvolvido com prioridade em dispositivos móveis, garantindo excelente experi
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/SEU_USUARIO/aquecedor-solar-ifsc.git
+   git clone https://github.com/DavidjGreensIFSC/Aquecedor-Solar.git
 
 2. Acesse a pasta:
     ```bash
-    cd aquecedor-solar-ifsc
+    cd Aquecedor-Solar
 
 - Abra o arquivo index.html no navegador ou utilize a extensão Live Server do VS Code.

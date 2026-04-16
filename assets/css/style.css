@@ -47,6 +47,13 @@
     padding: 100px 0;
   }
 
+  .member-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* quadrado perfeito */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 16px;
+  }
   /* ========================= UTILITÁRIOS ========================= */
   .glass-panel {
     background: var(--glass-bg);
@@ -321,6 +328,14 @@
 
   .parallax-img img {
     will-change: transform;
+  }
+
+  .member-card {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
 
   /* ========================= FUNCIONAMENTO ========================= */
