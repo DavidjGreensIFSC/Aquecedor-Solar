@@ -1,0 +1,42 @@
+RewriteEngine On
+
+# =========================
+# BASE (evita bugs em subpasta)
+# =========================
+RewriteBase /Aquecedor-Solar/
+
+# =========================
+# REMOVER .php DA URL
+# =========================
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)$ $1.php [L]
+
+
+# =========================
+# GARANTE INDEX NA PASTA
+# =========================
+DirectoryIndex index.php
+
+# =========================
+# SEGURANÇA BÁSICA
+# =========================
+Options -Indexes
+
+# =========================
+# GZIP (leve e seguro)
+# =========================
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json
+</IfModule>
+
+# =========================
+# CACHE (SEM EXAGERO PRA DEV)
+# =========================
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 7 days"
+    ExpiresByType image/png "access plus 7 days"
+    ExpiresByType text/css "access plus 1 day"
+    ExpiresByType application/javascript "access plus 1 day"
+</IfModule>

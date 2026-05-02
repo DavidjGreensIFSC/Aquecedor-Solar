@@ -1,3 +1,6 @@
+<?php // arquivo PHP 
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -32,6 +35,8 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <base href="/Aquecedor-Solar/">
 </head>
 
 <body>
@@ -45,13 +50,11 @@
       </a>
 
       <nav class="main-nav">
-        <a href="index.html" class="nav-link">Visão Geral</a>
-        <a href="funcionamento.html" class="nav-link">Funcionamento</a>
-        <a href="equipe.html" class="nav-link active">Equipe</a>
+        <a href="index" class="nav-link">Visão Geral</a>
+        <a href="#funcionamento" class="nav-link">Funcionamento</a>
+        <a href="#bento-features" class="nav-link">Benefícios</a>
+        <a href="equipe" class="nav-link">Equipe</a>
       </nav>
-
-      <a href="index.html#bento-features" class="btn-primary">Ver benefícios</a>
-
     </div>
   </header>
 
@@ -61,7 +64,7 @@
     <section class="hero section-padding">
       <div class="container">
 
-        <div class="hero-text text-center reveal">
+        <div class=.introducao-texto text-center reveal">
           <span class="eyebrow">Equipe Multidisciplinar</span>
 
           <h1>
@@ -124,19 +127,19 @@
           style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
 
           <div class="member-card glass-panel reveal">
-            <img src="assets/placeholder-professor.jpg" alt="Miguel ComBarba" loading="lazy">
+            <img src="assets/placeholder-professor.jpg" alt="Miguel Debarba" loading="lazy">
             <h3>Miguel Debarba</h3>
             <p class="role">Suporte Técnico</p>
           </div>
 
           <div class="member-card glass-panel reveal">
-            <img src="assets/placeholder-professor.jpg" alt="Ambientalista Gente Boa" loading="lazy">
+            <img src="assets/placeholder-professor.jpg" alt="Alencar Migliavacca" loading="lazy">
             <h3>Alencar Migliavacca</h3>
             <p class="role">Orientadora Principal em Sustentabilidade</p>
           </div>
 
           <div class="member-card glass-panel reveal">
-            <img src="assets/placeholder-professor.jpg" alt="Professor Orientador" loading="lazy">
+            <img src="assets/placeholder-professor.jpg" alt="Liane Beatriz Gerhardt" loading="lazy">
             <h3>Liane Beatriz Gerhardt</h3>
             <p class="role">Suporte Técnico</p>
           </div>
@@ -173,9 +176,11 @@
       <div class="footer-links">
         <h4>Navegação</h4>
         <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="funcionamento.html">Funcionamento</a></li>
-          <li><a href="equipe.html">Equipe</a></li>
+          <li><a href="index">Início</a></li>
+          <li><a href="#section-especificacoes">Visualizador 3D</a></li>
+          <li><a href="#funcionamento">Funcionamento</a></li>
+          <li><a href="#bento-features">Benefícios</a></li>
+          <li><a href="equipe">Equipe</a></li>
         </ul>
       </div>
 

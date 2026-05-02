@@ -49,11 +49,13 @@
 
   .member-card img {
     width: 100%;
-    aspect-ratio: 1 / 1; /* quadrado perfeito */
+    aspect-ratio: 1 / 1;
+    /* quadrado perfeito */
     object-fit: cover;
     object-position: center;
     border-radius: 16px;
   }
+
   /* ========================= UTILITÁRIOS ========================= */
   .glass-panel {
     background: var(--glass-bg);
@@ -171,6 +173,19 @@
     gap: 12px;
   }
 
+  .brand-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--accent-copper);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 50px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
   .top-bar .badge {
     background: var(--accent-copper);
     padding: 2px 8px;
@@ -213,6 +228,27 @@
     align-items: center;
     padding: 12px 24px;
     border-radius: 100px;
+  }
+
+  .brand-logo {
+    /* Mantém a proporção baseada nos 1200x411px */
+    height: 70px;
+    width: auto;
+
+    /* Garante que a imagem não ultrapasse o container em telas pequenas */
+    max-width: 100%;
+
+    /* Melhora a renderização da imagem */
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Ajuste fino para dispositivos móveis */
+  @media (max-width: 480px) {
+    .brand-logo {
+      height: 50px;
+      /* Reduz um pouco em telas muito estreitas */
+    }
   }
 
   .brand {
@@ -619,6 +655,496 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  /* ========================= SEÇÃO ESPECIFICAÇÕES (BOILER 3D) ========================= */
+
+  .section-especificacoes {
+    position: relative;
+    z-index: 1;
+  }
+
+  .cabecalho-secao {
+    max-width: 600px;
+    margin: 0 auto 60px;
+  }
+
+  .cabecalho-secao h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 16px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+  }
+
+  .cabecalho-secao p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+  }
+
+  .grid-especificacoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .visual-boiler {
+    position: relative;
+    width: 100%;
+  }
+
+  .container-boiler-3d {
+    position: relative;
+    background: linear-gradient(135deg, rgba(43, 122, 84, 0.08), rgba(194, 110, 71, 0.08));
+    border: 2px solid rgba(43, 122, 84, 0.2);
+    border-radius: 32px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .container-boiler-3d:hover {
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    border-color: rgba(43, 122, 84, 0.4);
+  }
+
+  #boilerCanvas {
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    transition: cursor 0.2s;
+    display: block;
+  }
+
+  #boilerCanvas:active {
+    cursor: grabbing;
+  }
+
+  .hint-rotacao {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: pulse-hint 2s ease-in-out infinite;
+    z-index: 10;
+  }
+
+  .hint-rotacao i {
+    color: var(--accent-green);
+    animation: bounce-hand 1.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse-hint {
+
+    0%,
+    100% {
+      opacity: 0.8;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes bounce-hand {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+
+  .indicador-angulo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    background: rgba(43, 122, 84, 0.9);
+    color: #fff;
+    border-radius: 16px;
+    font-weight: 800;
+    font-size: 1rem;
+    font-family: 'Courier New', monospace;
+    box-shadow: 0 4px 12px rgba(43, 122, 84, 0.3);
+    min-width: 60px;
+    text-align: center;
+    z-index: 10;
+  }
+
+  /* CONTEÚDO DO BOILER */
+  .conteudo-boiler h3 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    color: var(--text-main);
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .conteudo-boiler>p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+
+  /* TABELA DE ESPECIFICAÇÕES */
+  .tabela-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 32px;
+    background: linear-gradient(135deg, rgba(43, 122, 84, 0.08), rgba(194, 110, 71, 0.08));
+    border: 1px solid rgba(43, 122, 84, 0.15);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .spec-linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: background 0.2s ease;
+  }
+
+  .spec-linha:last-child {
+    border-bottom: none;
+  }
+
+  .spec-linha:hover {
+    background: rgba(43, 122, 84, 0.05);
+  }
+
+  .spec-label {
+    font-weight: 600;
+    color: var(--text-main);
+    font-size: 0.95rem;
+  }
+
+  .spec-valor {
+    font-weight: 800;
+    color: var(--accent-copper);
+    font-size: 1.15rem;
+    font-family: 'Courier New', monospace;
+  }
+
+  /* SENSORES DE TEMPERATURA */
+  .sensores-temperatura {
+    padding: 24px;
+    background: linear-gradient(135deg, rgba(43, 122, 84, 0.08), rgba(194, 110, 71, 0.08));
+    border: 1px solid rgba(43, 122, 84, 0.15);
+    border-radius: 20px;
+    margin-top: 32px;
+  }
+
+  .sensores-temperatura h4 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+  }
+
+  .grid-sensores {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .sensor-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: #fff;
+    border-radius: 16px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .sensor-frio {
+    border-color: #3B82F6;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(59, 130, 246, 0.02));
+  }
+
+  .sensor-frio:hover {
+    border-color: #2563EB;
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .sensor-quente {
+    border-color: #EF4444;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(239, 68, 68, 0.02));
+  }
+
+  .sensor-quente:hover {
+    border-color: #DC2626;
+    box-shadow: 0 8px 20px rgba(239, 68, 68, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .sensor-icone {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .sensor-frio .sensor-icone {
+    background: rgba(59, 130, 246, 0.15);
+    color: #3B82F6;
+  }
+
+  .sensor-quente .sensor-icone {
+    background: rgba(239, 68, 68, 0.15);
+    color: #EF4444;
+  }
+
+  .sensor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+  }
+
+  .sensor-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .sensor-valor {
+    font-size: 1.4rem;
+    font-weight: 800;
+    font-family: 'Courier New', monospace;
+  }
+
+  .sensor-frio .sensor-valor {
+    color: #3B82F6;
+  }
+
+  .sensor-quente .sensor-valor {
+    color: #EF4444;
+  }
+
+  .info-sensores {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  .info-sensores p {
+    margin: 0;
+  }
+
+  .info-sensores strong {
+    color: var(--text-main);
+    font-weight: 700;
+  }
+
+  .nota-tecnica {
+    margin-top: 16px;
+    padding: 16px 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+
+    background: linear-gradient(135deg,
+        rgba(43, 122, 84, 0.08),
+        rgba(194, 110, 71, 0.08));
+
+    border: 1px solid rgba(43, 122, 84, 0.15);
+    border-left: 4px solid var(--accent-green);
+    border-radius: 12px;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    transition: var(--transition);
+  }
+
+  /* leve interação */
+  .nota-tecnica:hover {
+    border-left-color: var(--accent-copper);
+    background: linear-gradient(135deg,
+        rgba(43, 122, 84, 0.12),
+        rgba(194, 110, 71, 0.12));
+  }
+
+  /* RESPONSIVO - SEÇÃO ESPECIFICAÇÕES */
+  @media (max-width: 992px) {
+    .grid-especificacoes {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .container-boiler-3d {
+      aspect-ratio: auto;
+      min-height: 400px;
+    }
+
+    .grid-sensores {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .grid-especificacoes {
+      gap: 30px;
+    }
+
+    .container-boiler-3d {
+      min-height: 350px;
+      border-radius: 24px;
+    }
+
+    .conteudo-boiler h3 {
+      font-size: 1.5rem;
+    }
+
+    .sensor-box {
+      padding: 14px;
+    }
+
+    .sensor-icone {
+      width: 45px;
+      height: 45px;
+      font-size: 1.3rem;
+    }
+
+    .sensor-valor {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cabecalho-secao {
+      margin: 0 auto 40px;
+    }
+
+    .cabecalho-secao h2 {
+      font-size: 1.6rem;
+    }
+
+    .grid-especificacoes {
+      gap: 30px;
+    }
+
+    .container-boiler-3d {
+      min-height: 300px;
+      aspect-ratio: auto;
+      border-radius: 20px;
+    }
+
+    .indicador-angulo {
+      font-size: 0.9rem;
+      padding: 10px 16px;
+      top: 12px;
+      right: 12px;
+    }
+
+    .hint-rotacao {
+      font-size: 0.75rem;
+      padding: 6px 12px;
+      bottom: 12px;
+    }
+
+    .conteudo-boiler h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    .conteudo-boiler>p {
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+    }
+
+    .tabela-specs {
+      margin-bottom: 24px;
+    }
+
+    .spec-linha {
+      padding: 14px 16px;
+    }
+
+    .spec-label {
+      font-size: 0.9rem;
+    }
+
+    .spec-valor {
+      font-size: 1rem;
+    }
+
+    .sensores-temperatura {
+      padding: 20px;
+      margin-top: 24px;
+    }
+
+    .sensores-temperatura h4 {
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .grid-sensores {
+      gap: 12px;
+    }
+
+    .sensor-box {
+      padding: 12px;
+      gap: 12px;
+    }
+
+    .sensor-icone {
+      width: 40px;
+      height: 40px;
+      font-size: 1.1rem;
+    }
+
+    .sensor-label {
+      font-size: 0.75rem;
+    }
+
+    .sensor-valor {
+      font-size: 1rem;
+    }
+
+    .info-sensores {
+      font-size: 0.85rem;
+    }
   }
 
   /* ========================= FOOTER COMPLETO ========================= */

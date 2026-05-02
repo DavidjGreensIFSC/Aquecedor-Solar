@@ -1,32 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  initHeaderScroll();
   initSmoothScroll();
   initScrollReveal();
   initParallaxEffect();
   initActiveOnScroll();
 });
-
-
-// =========================
-// HEADER INTELIGENTE
-// =========================
-function initHeaderScroll() {
-  const body = document.body;
-  const header = document.querySelector('.header-container');
-
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-
-    if (y > 50) {
-      body.classList.add('scrolled');
-      header.style.transform = "scale(0.97)";
-      header.style.backdropFilter = "blur(25px)";
-    } else {
-      body.classList.remove('scrolled');
-      header.style.transform = "scale(1)";
-    }
-  }, { passive: true });
-}
 
 
 // =========================
