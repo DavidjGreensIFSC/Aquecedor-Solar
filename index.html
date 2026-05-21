@@ -17,7 +17,7 @@
   <!-- OPEN GRAPH -->
   <meta property="og:title" content="Aquecedor Solar IFSC" />
   <meta property="og:description" content="Sistema sustentável de aquecimento de água com energia solar." />
-  <meta property="og:image" content="assets/img/img-aquecedor-agua.png" />
+  <meta property="og:image" content="assets/img/img-aquecedor-agua.webp" />
   <meta property="og:type" content="website" />
 
   <!-- FAVICON -->
@@ -88,8 +88,11 @@
 
         <div class="hero-visuals reveal delay-1">
           <div class="image-wrapper main-image parallax-img">
-            <img src="assets/img/img-aquecedor-agua.png" alt="Sistema de aquecimento solar instalado" loading="lazy"
-              onerror="this.src='https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=800&q=80'" />
+            <picture>
+              <source srcset="assets/img/img-aquecedor-agua.webp" type="image/webp">
+              <img src="assets/img/img-aquecedor-agua.webp" alt="Sistema de aquecimento solar instalado no IFSC Chapecó"
+                width="685" height="912" loading="lazy" decoding="async">
+            </picture>
           </div>
 
           <div class="stats-card glass-panel floating-card">
@@ -157,56 +160,6 @@
                 <span class="spec-valor">Aço inoxidável SUS304-2B</span>
               </div>
             </div>
-
-            <!-- SENSORES DE TEMPERATURA -->
-            <div class="sensores-temperatura">
-              <h4>
-                <i class="fa-solid fa-thermometer"></i>
-                Temperatura em Tempo Real
-              </h4>
-              <div class="grid-sensores">
-                <div class="sensor-box sensor-frio">
-                  <div class="sensor-icone">
-                    <i class="fa-solid fa-snowflake"></i>
-                  </div>
-                  <div class="sensor-info">
-                    <span class="sensor-label">Entrada Fria</span>
-                    <span class="sensor-valor">
-                      <span id="temp-fria" class="sensor-valor">--°C</span>
-                    </span>
-                  </div>
-                </div>
-
-                <div class="sensor-box sensor-quente">
-                  <div class="sensor-icone">
-                    <i class="fa-solid fa-fire"></i>
-                  </div>
-                  <div class="sensor-info">
-                    <span class="sensor-label">Saída Quente</span>
-                    <span class="sensor-valor">
-                      <span id="temp-quente" class="sensor-valor">--°C</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="info-sensores">
-                <p class="nota-tecnica">
-                  Monitoramento realizado por sistema externo baseado em microcontrolador ESP8266 com sensores
-                  DS18B20 instalados nas linhas de entrada e saída de água.
-                </p>
-
-                <p>
-                  <strong>Diferença Térmica:</strong>
-                  <span id="temp-diff">--°C</span>
-                </p>
-                <p>
-                  <strong>Última atualização:</strong>
-                  <span id="data-leitura" class="status-tempo">Carregando...</span>
-                </p>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
@@ -219,8 +172,8 @@
           <span class="eyebrow">Tecnologia Passiva</span>
           <h2>Como o sistema funciona</h2>
           <p>
-            O equipamento capta a radiação solar e a transforma em energia térmica,
-            aquecendo a água do campus a partir da conversão direta da radiação solar em energia térmica.
+            O equipamento capta a radiação solar e a transforma em energia térmica, aquecendo a água dos
+            vestiários/laboratórios de forma direta e limpa.
           </p>
         </div>
 
@@ -285,17 +238,86 @@
               durante a noite.</p>
           </div>
         </div>
+      </div>
 
-        <div class="section-padding">
-          <div class="text-center reveal">
-            <h2>Por que o sistema não precisa de eletricidade?</h2>
-            <p class="funcionamento-text">
-              Por ser um sistema passivo, o aquecimento funciona mesmo se houver queda de energia no campus. É a física
-              trabalhando a favor da disponibilidade constante, com manutenção reduzida ao mínimo por não possuir partes
-              móveis ou motores.
-            </p>
-            <a href="#bento-features" class="btn-primary">Ver todos os benefícios</a>
+      <div class="container section-padding">
+        <div class="text-center reveal">
+          <span class="eyebrow">Segurança & Controle</span>
+          <h2>Sistema de Proteção Térmica</h2>
+          <p class="funcionamento-text">
+            O aquecimento da água é <strong>100% passivo</strong> e não depende de bombas hidráulicas para circular.
+            Para garantir segurança e evitar superaquecimentos acima de 80°C, o sistema integra um
+            <strong>controlador digital automático</strong> que ativa um sistema de desvio de água quando a temperatura
+            limite é atingida.
+          </p>
+          <div style="margin-top: 24px;">
+            <a href="#iot-section" class="btn-primary">Conhecer a telemetria IoT</a>
           </div>
+        </div>
+      </div>
+
+      <div id="iot-section" class="bg-surface section-padding">
+        <div class="container">
+          <div class="section-heading text-center reveal">
+            <span class="eyebrow">Monitoramento em Tempo Real</span>
+            <h2>Telemetria IoT com <strong>ESP8266</strong></h2>
+            <p>
+              Além do controle automático, o sistema possui sensores de temperatura nos canos que integram
+              um microcontrolador ESP8266 para monitoramento em tempo real e fins didáticos.
+            </p>
+          </div>
+
+          <div class="info-grid reveal delay-1">
+            <div class="info-card highlight-card delay-1">
+              <i class="fa-solid fa-thermometer"></i>
+              <h4>Sensores de Temperatura</h4>
+              <p>Dois sensores posicionados nos canos capturam a temperatura da água fria (entrada) e quente (saída)
+                em tempo real, permitindo visualização instantânea do desempenho do sistema.</p>
+            </div>
+
+            <div class="info-card highlight-card delay-2">
+              <i class="fa-solid fa-microchip"></i>
+              <h4>Microcontrolador ESP8266</h4>
+              <p>Recebe os dados dos sensores e controla um display local que exibe continuamente as temperaturas
+                da água fria e quente, funcionando como um termômetro inteligente do sistema.</p>
+            </div>
+
+            <div class="info-card highlight-card delay-3">
+              <i class="fa-solid fa-display"></i>
+              <h4>Display em Tempo Real</h4>
+              <p>Painel visual que mostra simultaneamente a temperatura de entrada (fria) e saída (quente), permitindo
+                visualizar a diferença térmica e eficiência do aquecimento em qualquer momento.</p>
+            </div>
+
+            <div class="info-card highlight-card delay-4">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <h4>Laboratório Didático</h4>
+              <p>Transforma a instalação em uma ferramenta educacional prática, permitindo que alunos observem
+                energia renovável em ação e entendam como monitorar sistemas térmicos.</p>
+            </div>
+          </div>
+
+          <div class="text-center reveal" style="margin-top: 50px;">
+            <p class="funcionamento-text">
+              <strong>Importante:</strong> Enquanto o aquecimento solar funciona 100% de forma passiva, o controlador
+              automático e o sistema de telemetria IoT utilizam eletricidade de baixíssimo consumo. Essa combinação
+              garante segurança, monitoramento educacional e máxima eficiência energética.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container section-padding">
+        <div class="text-center reveal">
+          <h2>Por que o aquecimento é passivo?</h2>
+          <p class="funcionamento-text">
+            A <strong>circulação de água</strong> é 100% natural e não depende de bombas elétricas. Ela ocorre
+            pela diferença de densidade entre a água quente e fria, um princípio físico chamado
+            <strong>termossifão</strong>. Mesmo em caso de queda de energia, o sistema continua aquecendo
+            normalmente. A eletricidade é usada apenas para <strong>controle de segurança</strong>
+            (proteção térmica) e <strong>monitoramento</strong> (telemetria), não para o aquecimento em si.
+          </p>
+          <a href="#bento-features" class="btn-primary">Ver todos os benefícios</a>
         </div>
       </div>
     </section>
@@ -402,53 +424,8 @@
   <!-- JS -->
   <script src="assets/js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="assets/js/boiler-3d.js"></script>
+  <!--   <script src="assets/js/boiler-3d.js"></script> -->
 
-
-  <script>
-    /**
-     * Função para atualizar os dados dos sensores e o timestamp
-     */
-    function atualizarMonitoramento() {
-      // 1. Definição de elementos do DOM (cache)
-      const elFrio = document.getElementById('temp-fria');
-      const elQuente = document.getElementById('temp-quente');
-      const elDiff = document.getElementById('temp-diff');
-      const elTimestamp = document.getElementById('data-leitura');
-
-      // 2. Lógica dos Sensores (Simulação)
-      // Frio: 18°C a 23°C | Quente: 51°C a 80°C
-      const tempFria = (Math.random() * (23 - 18) + 18).toFixed(1);
-      const tempQuente = (Math.random() * (80 - 51) + 51).toFixed(1);
-      const diferencial = (tempQuente - tempFria).toFixed(1);
-
-      // 3. Formatação de Data e Hora
-      const agora = new Date();
-      const dataHora = agora.toLocaleString('pt-BR', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit'
-      });
-
-      // 4. Atualização da Interface
-      if (elFrio) elFrio.textContent = `${tempFria}°C`;
-      if (elQuente) elQuente.textContent = `${tempQuente}°C`;
-      if (elDiff) elDiff.textContent = `${diferencial}°C`;
-      if (elTimestamp) elTimestamp.textContent = dataHora.replace(',', ' às');
-    }
-
-    // Garante que o script rode apenas após o carregamento total da página
-    document.addEventListener('DOMContentLoaded', () => {
-      // Roda imediatamente ao carregar
-      atualizarMonitoramento();
-
-      // Define o intervalo de atualização (5 segundos)
-      setInterval(atualizarMonitoramento, 5000);
-    });
-  </script>
 </body>
 
 </html>

@@ -1,91 +1,85 @@
-<?php // arquivo PHP 
-?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-  <!-- META BASE -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#2B7A54">
 
-  <!-- SEO -->
   <title>Equipe | Aquecedor Solar IFSC Chapecó</title>
   <meta name="description"
-    content="Conheça a equipe multidisciplinar do projeto de aquecedor solar do IFSC Campus Chapecó. Estudantes e professores trabalhando pela sustentabilidade." />
+    content="Conheça a equipe multidisciplinar do projeto de revitalização e monitoramento do aquecedor solar do IFSC Campus Chapecó." />
   <meta name="keywords"
-    content="equipe, aquecedor solar, IFSC Chapecó, projeto sustentável, estudantes, orientadores" />
+    content="equipe, aquecedor solar, IFSC Chapecó, IoT, sustentabilidade, estudantes, reforma" />
   <meta name="author" content="IFSC Chapecó" />
 
-  <!-- OPEN GRAPH -->
   <meta property="og:title" content="Equipe - Aquecedor Solar IFSC Chapecó" />
   <meta property="og:description"
-    content="Conheça quem desenvolveu o sistema de aquecimento solar sustentável no IFSC Campus Chapecó." />
+    content="Conheça os responsáveis pela modernização, sistema IoT e revitalização do ambiente do aquecimento solar no IFSC Campus Chapecó." />
   <meta property="og:image" content="assets/img/img-aquecedor-agua.png" />
   <meta property="og:type" content="website" />
 
-  <!-- FAVICON -->
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
 
-  <!-- FONTE -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
 
-  <!-- HEADER -->
   <header class="main-header">
     <div class="header-container glass-panel">
 
-      <a href="index.html" class="brand">
-        <strong>IFSC</strong> Chapecó
+      <a href="" class="brand" onclick="location.reload(); return false;">
+        <img src="assets/img/logo-ifsc.png" alt="Logo IFSC" class="brand-logo">
+        <!-- <strong>IFSC</strong> Chapecó -->
       </a>
 
       <nav class="main-nav">
-        <a href="index.html" class="nav-link">Visão Geral</a>
+        <a href="index.html#hero" class="nav-link active">Visão Geral</a>
+        <a href="index.html#section-especificacoes" class="nav-link">Sistema 3D</a>
         <a href="index.html#funcionamento" class="nav-link">Funcionamento</a>
         <a href="index.html#bento-features" class="nav-link">Benefícios</a>
         <a href="equipe.html" class="nav-link">Equipe</a>
       </nav>
+
+      <a href="index.html#funcionamento" class="btn-primary">Ver sistema</a>
+
     </div>
   </header>
 
   <main>
 
-    <!-- HERO EQUIPE -->
     <section class="hero section-padding">
       <div class="container">
 
-        <div class=.introducao-texto text-center reveal">
-          <span class="eyebrow">Equipe Multidisciplinar</span>
+        <div class="introducao-texto text-center reveal">
+          <span class="eyebrow">Ação e Modernização</span>
 
           <h1>
-            Projeto desenvolvido pelo<br>
-            <span class="highlight">IFSC Campus Chapecó</span>
+            Revitalização e Monitoramento do<br>
+            <span class="highlight">Aquecedor Solar IFSC</span>
           </h1>
 
           <p style="max-width: 720px; margin: 0 auto;">
-            O aquecedor solar foi criado por uma equipe de estudantes e professores do IFSC Chapecó,
-            unindo conhecimento em energia renovável, engenharia térmica e sustentabilidade.
+            Mais do que tecnologia, sustentabilidade exige manutenção e evolução. Nossa equipe trabalhou na 
+            reestruturação completa do ambiente físico, melhorias na rede hidráulica e na implementação de um ecossistema 
+            IoT para monitoramento térmico em tempo real.
           </p>
         </div>
 
       </div>
     </section>
 
-    <!-- Equipe de Desenvolvimento -->
-    <section class="section-padding">
+    <section class="section-padding" style="padding-top: 0;">
       <div class="container">
 
         <div class="section-heading text-center reveal">
-          <h2>Equipe de Desenvolvimento</h2>
-          <p>Estudantes responsáveis pelo desenvolvimento técnico e execução do projeto</p>
+          <h2>Equipe de Execução</h2>
+          <p>Estudantes responsáveis pela modernização tecnológica e reforma prática do espaço</p>
         </div>
 
         <div class="members-grid"
@@ -94,52 +88,61 @@
           <div class="member-card glass-panel reveal">
             <img src="assets/img/Kauã.png" alt="Kauã Malagutti" loading="lazy">
             <h3>Kauã Malagutti</h3>
-            <p class="role">Desenvolvimento da interface e estrutura do sistema web</p>
+            <p class="role" style="font-weight: 700; color: var(--accent-green); margin-bottom: 4px;">Sistemas Web & Infraestrutura</p>
+            <p class="description" style="color: var(--text-muted); font-size: 0.9rem;">Desenvolvimento de toda a interface do sistema web de monitoramento e atuação direta na reforma e pintura do espaço físico.</p>
           </div>
 
-          <div class="member-card glass-panel reveal">
+          <div class="member-card glass-panel reveal delay-1">
             <img src="assets/img/David.png" alt="David Jr." loading="lazy">
             <h3>David Jr.</h3>
-            <p class="role">Apoio no desenvolvimento e pesquisa do funcionamento do sistema</p>
+            <p class="role" style="font-weight: 700; color: var(--accent-green); margin-bottom: 4px;">Reforma & Higienização</p>
+            <p class="description" style="color: var(--text-muted); font-size: 0.9rem;">Responsável pela preparação, lavagem profunda, pintura e revitalização estrutural do ambiente do aquecedor solar.</p>
           </div>
 
-          <div class="member-card glass-panel reveal">
+          <div class="member-card glass-panel reveal delay-2">
             <img src="assets/img/Heitor.png" alt="Heitor Scussiatto" loading="lazy">
             <h3>Heitor Scussiatto</h3>
-            <p class="role">Testes, análise e validação térmica do sistema</p>
+            <p class="role" style="font-weight: 700; color: var(--accent-green); margin-bottom: 4px;">Engenharia IoT & Hidráulica</p>
+            <p class="description" style="color: var(--text-muted); font-size: 0.9rem;">Desenvolvimento do sistema IoT para monitoramento local de temperatura da água, além de apoio técnico na reestruturação hidráulica e reformas.</p>
           </div>
+          
         </div>
       </div>
     </section>
 
-    <!-- Orientação e Supervisão -->
-    <section class="section-padding bg-surface">
+    <section class="section-padding" style="background: rgba(0,0,0,0.02); border-top: 1px solid rgba(0,0,0,0.03); border-bottom: 1px solid rgba(0,0,0,0.03);">
       <div class="container">
-
+        
         <div class="section-heading text-center reveal">
-          <h2>Orientação e Supervisão</h2>
-          <p>Responsáveis pela orientação técnica e científica do projeto</p>
+          <span class="eyebrow">Transformação do Ambiente</span>
+          <h2>Melhorias de Infraestrutura Realizadas</h2>
+          <p>Otimizações físicas implementadas para garantir usabilidade, conforto e eficiência no local</p>
         </div>
 
-        <div class="members-grid"
-          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-
-          <div class="member-card glass-panel reveal">
-            <img src="assets/placeholder-professor.jpg" alt="Miguel Debarba" loading="lazy">
-            <h3>Miguel Debarba</h3>
-            <p class="role">Suporte Técnico</p>
+        <div class="info-grid">
+          
+          <div class="info-card reveal">
+            <i class="fa-solid fa-paint-roller"></i>
+            <h4>Revitalização da Casinha</h4>
+            <p>Pintura e lavagem completa da estrutura de proteção do sistema, garantindo maior durabilidade contra intempéries e renovação estética do local.</p>
           </div>
 
-          <div class="member-card glass-panel reveal">
-            <img src="assets/placeholder-professor.jpg" alt="Alencar Migliavacca" loading="lazy">
-            <h3>Alencar Migliavacca</h3>
-            <p class="role">Orientadora Principal em Sustentabilidade</p>
+          <div class="info-card reveal delay-1">
+            <i class="fa-solid fa-faucet-drip"></i>
+            <h4>Ajuste Hidráulico e Nova Pia</h4>
+            <p>Instalação de uma pia funcional que não existia previamente no local, acompanhada do alinhamento e correção de vazamentos na tubulação de água.</p>
           </div>
 
-          <div class="member-card glass-panel reveal">
-            <img src="assets/placeholder-professor.jpg" alt="Liane Beatriz Gerhardt" loading="lazy">
-            <h3>Liane Beatriz Gerhardt</h3>
-            <p class="role">Suporte Técnico</p>
+          <div class="info-card reveal delay-2">
+            <i class="fa-solid fa-mug-hot"></i>
+            <h4>Ponto de Água Quente</h4>
+            <p>Implementação de uma torneira de água quente dedicada, dimensionada termicamente para o consumo diário e perfeita para o preparo de chimarrão direto da fonte solar.</p>
+          </div>
+
+          <div class="info-card reveal delay-3">
+            <i class="fa-solid fa-microchip"></i>
+            <h4>Monitoramento IoT</h4>
+            <p>Integração de sensores locais acoplados à tubulação para leitura precisa e transmissão em tempo real dos dados de temperatura da água.</p>
           </div>
 
         </div>
@@ -147,28 +150,55 @@
     </section>
 
     <section class="section-padding">
+      <div class="container">
+
+        <div class="section-heading text-center reveal">
+          <h2>Orientação e Supervisão</h2>
+          <p>Responsáveis pelo suporte técnico, pedagógico e científico do projeto</p>
+        </div>
+
+        <div class="members-grid"
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+
+          <div class="member-card glass-panel reveal">
+            <img src="assets/img/placeholder-professor.jpg" alt="Miguel Debarba" loading="lazy">
+            <h3>Miguel Debarba</h3>
+            <p class="role" style="color: var(--text-muted);">Suporte Técnico e Automação</p>
+          </div>
+
+          <div class="member-card glass-panel reveal delay-1">
+            <img src="assets/img/placeholder-professor.jpg" alt="Alencar Migliavacca" loading="lazy">
+            <h3>Alencar Migliavacca</h3>
+            <p class="role" style="color: var(--text-muted);">Orientação Prática e Sustentabilidade</p>
+          </div>
+
+          <div class="member-card glass-panel reveal delay-2">
+            <img src="assets/img/placeholder-professor.jpg" alt="Liane Beatriz Gerhardt" loading="lazy">
+            <h3>Liane Beatriz Gerhardt</h3>
+            <p class="role" style="color: var(--text-muted);">Suporte Técnico e Pedagógico</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding" style="padding-top: 0;">
       <div class="container text-center reveal">
-
-        <h2>Trabalho em equipe que gera impacto real</h2>
-
-        <p style="max-width:700px; margin:0 auto;">
-          Este projeto demonstra como a colaboração entre estudantes e professores pode
-          gerar soluções sustentáveis reais, aplicáveis no dia a dia.
+        <h2>Trabalho prático que gera impacto real</h2>
+        <p style="max-width:700px; margin:0 auto; color: var(--text-muted);">
+          A união entre melhoria estrutural e monitoramento tecnológico transforma o espaço acadêmico do IFSC Campus Chapecó, provando a viabilidade de sistemas ecológicos no nosso cotidiano.
         </p>
-
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
-
     <div class="container footer-grid">
 
       <div class="footer-brand">
         <strong>IFSC Chapecó</strong>
-        <p>Aplicando inovação e sustentabilidade no cotidiano.</p>
+        <p>Aplicando inovação, IoT e sustentabilidade no cotidiano universitário.</p>
       </div>
 
       <div class="footer-links">
@@ -186,7 +216,7 @@
         <h4>Projeto</h4>
         <ul>
           <li><a href="#">Documentação</a></li>
-          <li><a href="#">Esquema técnico</a></li>
+          <li><a href="#">Esquema IoT</a></li>
         </ul>
       </div>
 
@@ -195,12 +225,9 @@
     <div class="container footer-bottom">
       <p>&copy; 2026 IFSC Chapecó</p>
     </div>
-
   </footer>
 
-  <!-- JS -->
   <script src="assets/js/script.js"></script>
 
 </body>
-
 </html>

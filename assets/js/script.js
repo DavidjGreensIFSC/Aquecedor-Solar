@@ -3,8 +3,35 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initParallaxEffect();
   initActiveOnScroll();
+  initBoilerLazyLoad();
+  initMobileNavbarHide();
 });
 
+// =========================
+// NAVBAR INTELIGENTE MOBILE
+// =========================
+function initMobileNavbarHide() {
+  const header = document.querySelector('.main-header');
+  let lastScrollY = 0;
+
+  // Só ativa em mobile
+  if (window.matchMedia("(max-width: 992px)").matches) {
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+
+      // Se scrollar pra cima, mostra navbar
+      if (currentScrollY < lastScrollY || currentScrollY < 100) {
+        header.classList.remove('navbar-hidden');
+      } 
+      // Se scrollar pra baixo, esconde navbar
+      else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        header.classList.add('navbar-hidden');
+      }
+
+      lastScrollY = currentScrollY;
+    }, { passive: true });
+  }
+}
 
 // =========================
 // SCROLL SUAVE
@@ -122,13 +149,9 @@ function smoothScrollTo(target, duration) {
   function animation(currentTime) {
     if (!startTime) startTime = currentTime;
     const timeElapsed = currentTime - startTime;
-
     const run = easeInOutQuad(timeElapsed, start, distance, duration);
     window.scrollTo(0, run);
-
-    if (timeElapsed < duration) {
-      requestAnimationFrame(animation);
-    }
+    if (timeElapsed < duration) requestAnimationFrame(animation);
   }
 
   function easeInOutQuad(t, b, c, d) {
@@ -139,4 +162,36 @@ function smoothScrollTo(target, duration) {
   }
 
   requestAnimationFrame(animation);
+}
+
+// ======================
+// LAZY LOAD DO BOILER 3D
+// ======================
+function loadBoiler3D() {
+  if (window.boilerLoaded) return;
+  window.boilerLoaded = true;
+
+  const script = document.createElement('script');
+  script.src = 'assets/js/boiler-3d.js';
+  script.defer = true;
+  document.body.appendChild(script);
+}
+
+function initBoilerLazyLoad() {
+  const boilerSection = document.getElementById('section-especificacoes');
+  if (!boilerSection) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        loadBoiler3D();
+        observer.disconnect(); // carrega só uma vez
+      }
+    });
+  }, {
+    rootMargin: '200px',   // começa a carregar antes de aparecer
+    threshold: 0.1
+  });
+
+  observer.observe(boilerSection);
 }
