@@ -3,25 +3,26 @@
 
 <head>
   <!-- META BASE -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#2B7A54">
 
   <!-- SEO -->
   <title>Aquecedor Solar | IFSC Chapecó</title>
   <meta name="description"
-    content="Sistema de aquecimento de água por energia solar instalado no IFSC Chapecó. Utiliza tubos a vácuo para aquecimento eficiente e sustentável." />
-  <meta name="keywords" content="aquecedor solar, energia solar, termossifão, IFSC, sustentabilidade" />
-  <meta name="author" content="IFSC Chapecó" />
+    content="Sistema de aquecimento de água por energia solar instalado no IFSC Chapecó. Utiliza tubos a vácuo para aquecimento eficiente e sustentável.">
+  <meta name="keywords" content="aquecedor solar, energia solar, termossifão, IFSC, sustentabilidade">
+  <meta name="author" content="IFSC Chapecó">
 
   <!-- OPEN GRAPH -->
-  <meta property="og:title" content="Aquecedor Solar IFSC" />
-  <meta property="og:description" content="Sistema sustentável de aquecimento de água com energia solar." />
-  <meta property="og:image" content="https://davidjgreensifsc.github.io/Aquecedor-Solar/assets/img/og-aquecedor-solar.webp" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:type" content="image/webp" />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Aquecedor Solar IFSC">
+  <meta property="og:description" content="Sistema sustentável de aquecimento de água com energia solar.">
+  <meta property="og:image"
+    content="https://davidjgreensifsc.github.io/Aquecedor-Solar/assets/img/og-aquecedor-solar.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/webp">
+  <meta property="og:type" content="website">
 
   <!-- FAVICON -->
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
@@ -36,7 +37,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -45,7 +46,7 @@
   <header class="main-header">
     <div class="header-container glass-panel">
 
-      <a href="" class="brand" onclick="location.reload(); return false;">
+      <a class="brand" onclick="location.reload(); return false;">
         <img src="assets/img/logo-ifsc.png" alt="Logo IFSC" class="brand-logo">
         <!-- <strong>IFSC</strong> Chapecó -->
       </a>
@@ -75,7 +76,7 @@
 
           <h1>
             Água quente todos os dias.<br>
-            <span class="highlight">Sem custo. Sem impacto.</span>
+            <span class="highlight">Com energia do sol.</span>
           </h1>
 
           <p>
@@ -197,9 +198,8 @@
               <span class="highlight">Redução do consumo elétrico</span>
             </h2>
             <p>
-              O sistema capta o calor do sol, transfere para a água e faz a circulação natural
-              por diferença de densidade. A circulação ocorre naturalmente por diferença de densidade entre a água
-              quente e fria.
+              O sistema capta o calor do sol, transfere essa energia para a água e promove a circulação natural por
+              diferença de densidade entre a água quente e a água fria, princípio conhecido como termossifão.
             </p>
           </div>
         </div>
@@ -237,7 +237,7 @@
           <div class="info-card highlight-card delay-4">
             <i class="fa-solid fa-temperature-half"></i>
             <h4>4. Armazenamento</h4>
-            <p>A água quente é armazenada no Boiler (reservatório isolado), mantendo a temperatura por horas mesmo
+            <p>A água quente é armazenada no boiler (reservatório isolado), mantendo a temperatura por horas mesmo
               durante a noite.</p>
           </div>
         </div>
@@ -254,7 +254,7 @@
             limite é atingida.
           </p>
           <div style="margin-top: 24px;">
-            <a href="#iot-section" class="btn-primary">Conhecer a telemetria IoT</a>
+            <a href="#iot-section" class="btn-primary">Conhecer o monitoramento digital</a>
           </div>
         </div>
       </div>
@@ -263,51 +263,51 @@
         <div class="container">
           <div class="section-heading text-center reveal">
             <span class="eyebrow">Monitoramento em Tempo Real</span>
-            <h2>Telemetria IoT com <strong>ESP8266</strong></h2>
+            <h2>Monitoramento digital com <strong>ESP8266</strong></h2>
             <p>
-              Além do controle automático, o sistema possui sensores de temperatura nos canos que integram
-              um microcontrolador ESP8266 para monitoramento em tempo real e fins didáticos.
+              Além do controle automático, o sistema possui um sensor de temperatura integrado a um microcontrolador
+              ESP8266 para monitoramento em tempo real e fins didáticos.
             </p>
           </div>
 
           <div class="info-grid reveal delay-1">
             <div class="info-card highlight-card delay-1">
               <i class="fa-solid fa-thermometer"></i>
-              <h4>Sensores de Temperatura</h4>
-              <p>Dois sensores posicionados nos canos capturam a temperatura da água fria (entrada) e quente (saída)
-                em tempo real, permitindo visualização instantânea do desempenho do sistema.</p>
+              <h4>Sensor de Temperatura</h4>
+              <p>Um sensor posicionado no cano monitora a temperatura da água quente em tempo real, fornecendo os dados
+                necessários para o acompanhamento do sistema.</p>
             </div>
 
             <div class="info-card highlight-card delay-2">
               <i class="fa-solid fa-microchip"></i>
               <h4>Microcontrolador ESP8266</h4>
-              <p>Recebe os dados dos sensores e controla um display local que exibe continuamente as temperaturas
-                da água fria e quente, funcionando como um termômetro inteligente do sistema.</p>
+              <p>Recebe os dados do sensor e processa as informações, controlando o display responsável pela exibição
+                local das medições.</p>
             </div>
 
             <div class="info-card highlight-card delay-3">
               <i class="fa-solid fa-display"></i>
               <h4>Display em Tempo Real</h4>
-              <p>Painel visual que mostra simultaneamente a temperatura de entrada (fria) e saída (quente), permitindo
-                visualizar a diferença térmica e eficiência do aquecimento em qualquer momento.</p>
+              <p>Painel visual que exibe continuamente a temperatura da água quente, permitindo acompanhar o
+                funcionamento do sistema de aquecimento em qualquer momento.</p>
             </div>
 
             <div class="info-card highlight-card delay-4">
               <i class="fa-solid fa-graduation-cap"></i>
               <h4>Laboratório Didático</h4>
-              <p>Transforma a instalação em uma ferramenta educacional prática, permitindo que alunos observem
-                energia renovável em ação e entendam como monitorar sistemas térmicos.</p>
+              <p>Transforma a instalação em uma ferramenta educacional prática, permitindo que alunos observem a energia
+                renovável em ação e compreendam o monitoramento de sistemas térmicos.</p>
             </div>
           </div>
-
-          <div class="text-center reveal" style="margin-top: 50px;">
-            <p class="funcionamento-text">
-              <strong>Importante:</strong> Enquanto o aquecimento solar funciona 100% de forma passiva, o controlador
-              automático e o sistema de telemetria IoT utilizam eletricidade de baixíssimo consumo. Essa combinação
-              garante segurança, monitoramento educacional e máxima eficiência energética.
-            </p>
-          </div>
         </div>
+      </div>
+
+      <div class="text-center reveal" style="margin-top: 50px;">
+        <p class="funcionamento-text">
+          <strong>Importante:</strong> Enquanto o aquecimento solar funciona 100% de forma passiva, o controlador
+          automático e o sistema de medição da temperatura utilizam eletricidade de baixíssimo consumo. Essa combinação
+          garante segurança, monitoramento educacional e máxima eficiência energética.
+        </p>
       </div>
 
       <div class="container section-padding">
@@ -375,7 +375,7 @@
 
             <div class="bento-img-small parallax-img">
               <img src="assets/img/seletor.png" alt="Controle de temperatura" loading="lazy"
-                onerror="this.src='https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&w=400&q=80'" />
+                onerror="this.src='https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&w=400&q=80'">
             </div>
 
           </div>
@@ -411,8 +411,8 @@
       <div class="footer-links">
         <h4>Projeto</h4>
         <ul>
-          <li><a href="#">Documentação</a></li>
-          <li><a href="#">Esquema técnico</a></li>
+          <li><span style="opacity: 0.4;">Documentação (em breve)</span></li>
+          <li><span style="opacity: 0.4;">Esquema IoT (em breve)</span></li>
         </ul>
       </div>
 
