@@ -156,6 +156,10 @@
                 <span class="spec-valor">Tubos a Vácuo</span>
               </div>
               <div class="spec-linha">
+                <span class="spec-label">Sistema de Apoio / Backup</span>
+                <span class="spec-valor">Resistência Elétrica (3000W)</span>
+              </div>
+              <div class="spec-linha">
                 <span class="spec-label">Quantidade de Tubos</span>
                 <span class="spec-valor">15 Tubos</span>
               </div>
@@ -211,118 +215,155 @@
           <p>O ciclo completo de aquecimento da água</p>
         </div>
 
-        <div class="info-grid reveal delay-1">
-          <div class="info-card highlight-card delay-1">
+        <!-- PRIMEIRA LINHA -->
+        <div class="info-grid reveal delay-1"
+          style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 20px;">
+
+          <div class="info-card highlight-card delay-1" style="flex: 1; min-width: 280px; max-width: 350px;">
             <i class="fa-solid fa-sun"></i>
             <h4>1. Captação solar</h4>
-            <p>Os tubos a vácuo absorvem a radiação e convertem em energia térmica com altíssima eficiência, mesmo
-              em
-              dias nublados.</p>
-          </div>
-
-          <div class="info-card highlight-card delay-2">
-            <i class="fa-solid fa-fire"></i>
-            <h4>2. Transferência</h4>
-            <p>O calor é transferido diretamente para a água dentro dos tubos. O isolamento a vácuo minimiza perdas
-              para o ambiente.</p>
-          </div>
-
-          <div class="info-card highlight-card delay-3">
-            <i class="fa-solid fa-arrows-rotate"></i>
-            <h4>3. Termossifão</h4>
-            <p>A água quente (menos densa) sobe naturalmente para o boiler, enquanto a fria desce, criando um ciclo
-              contínuo sem bombas.</p>
-          </div>
-
-          <div class="info-card highlight-card delay-4">
-            <i class="fa-solid fa-temperature-half"></i>
-            <h4>4. Armazenamento</h4>
-            <p>A água quente é armazenada no boiler (reservatório isolado), mantendo a temperatura por horas mesmo
-              durante a noite.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container section-padding">
-        <div class="text-center reveal">
-          <span class="eyebrow">Segurança & Controle</span>
-          <h2>Sistema de Proteção Térmica</h2>
-          <p class="funcionamento-text">
-            O aquecimento da água é <strong>100% passivo</strong> e não depende de bombas hidráulicas para circular.
-            Para garantir segurança e evitar superaquecimentos acima de 80°C, o sistema integra um
-            <strong>controlador digital automático</strong> que ativa um sistema de desvio de água quando a temperatura
-            limite é atingida.
-          </p>
-          <div style="margin-top: 24px;">
-            <a href="#iot-section" class="btn-primary">Conhecer o monitoramento digital</a>
-          </div>
-        </div>
-      </div>
-
-      <div id="iot-section" class="bg-surface section-padding">
-        <div class="container">
-          <div class="section-heading text-center reveal">
-            <span class="eyebrow">Monitoramento em Tempo Real</span>
-            <h2>Monitoramento digital com <strong>ESP8266</strong></h2>
             <p>
-              Além do controle automático, o sistema possui um sensor de temperatura integrado a um microcontrolador
-              ESP8266 para monitoramento em tempo real e fins didáticos.
+              Os tubos a vácuo absorvem a radiação solar e reduzem perdas térmicas,
+              permitindo o aproveitamento eficiente da energia do sol mesmo em dias frios
+              ou com menor incidência solar.
             </p>
           </div>
 
-          <div class="info-grid reveal delay-1">
-            <div class="info-card highlight-card delay-1">
-              <i class="fa-solid fa-thermometer"></i>
-              <h4>Sensor de Temperatura</h4>
-              <p>Um sensor posicionado no cano monitora a temperatura da água quente em tempo real, fornecendo os dados
-                necessários para o acompanhamento do sistema.</p>
-            </div>
+          <div class="info-card highlight-card delay-2" style="flex: 1; min-width: 280px; max-width: 350px;">
+            <i class="fa-solid fa-fire"></i>
+            <h4>2. Aquecimento da água</h4>
+            <p>
+              O calor captado pelos tubos é transferido para a água do sistema,
+              elevando sua temperatura de forma totalmente natural e sem o uso de bombas.
+            </p>
+          </div>
 
-            <div class="info-card highlight-card delay-2">
-              <i class="fa-solid fa-microchip"></i>
-              <h4>Microcontrolador ESP8266</h4>
-              <p>Recebe os dados do sensor e processa as informações, controlando o display responsável pela exibição
-                local das medições.</p>
-            </div>
+          <div class="info-card highlight-card delay-3" style="flex: 1; min-width: 280px; max-width: 350px;">
+            <i class="fa-solid fa-arrows-rotate"></i>
+            <h4>3. Circulação por termossifão</h4>
+            <p>
+              A água aquecida torna-se menos densa e sobe naturalmente para o boiler,
+              enquanto a água mais fria desce para ser aquecida novamente, criando um
+              ciclo contínuo sem consumo elétrico para circulação.
+            </p>
+          </div>
 
-            <div class="info-card highlight-card delay-3">
-              <i class="fa-solid fa-display"></i>
-              <h4>Display em Tempo Real</h4>
-              <p>Painel visual que exibe continuamente a temperatura da água quente, permitindo acompanhar o
-                funcionamento do sistema de aquecimento em qualquer momento.</p>
-            </div>
+        </div>
 
-            <div class="info-card highlight-card delay-4">
-              <i class="fa-solid fa-graduation-cap"></i>
-              <h4>Laboratório Didático</h4>
-              <p>Transforma a instalação em uma ferramenta educacional prática, permitindo que alunos observem a energia
-                renovável em ação e compreendam o monitoramento de sistemas térmicos.</p>
+        <!-- SEGUNDA LINHA -->
+        <div class="info-grid reveal delay-2"
+          style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+
+          <div class="info-card highlight-card delay-4" style="flex: 1; min-width: 280px; max-width: 350px;">
+            <i class="fa-solid fa-temperature-half"></i>
+            <h4>4. Armazenamento térmico</h4>
+            <p>
+              A água quente é armazenada no boiler com isolamento em poliuretano,
+              preservando a temperatura por várias horas e reduzindo perdas durante a noite.
+            </p>
+          </div>
+
+          <div class="info-card highlight-card delay-5" style="flex: 1; min-width: 280px; max-width: 350px;">
+            <i class="fa-solid fa-bolt"></i>
+            <h4>5. Apoio elétrico inteligente</h4>
+            <p>
+              Em períodos prolongados de baixa incidência solar, o controlador digital
+              TEN 8 pode acionar automaticamente a resistência elétrica auxiliar,
+              garantindo água quente e mantendo a economia de energia.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="container section-padding">
+          <div class="text-center reveal">
+            <span class="eyebrow">Segurança & Controle</span>
+            <h2>Sistema de Proteção Térmica</h2>
+            <p class="funcionamento-text">
+              O aquecimento da água é <strong>100% passivo</strong> e não depende de bombas hidráulicas para circular.
+              Para garantir segurança e evitar superaquecimentos acima de 80°C, o sistema integra um
+              <strong>controlador digital automático</strong> que ativa um sistema de desvio de água quando a
+              temperatura
+              limite é atingida.
+            </p>
+            <div style="margin-top: 24px;">
+              <a href="#iot-section" class="btn-primary">Conhecer o monitoramento digital</a>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="text-center reveal" style="margin-top: 50px;">
-        <p class="funcionamento-text">
-          <strong>Importante:</strong> Enquanto o aquecimento solar funciona 100% de forma passiva, o controlador
-          automático e o sistema de medição da temperatura utilizam eletricidade de baixíssimo consumo. Essa combinação
-          garante segurança, monitoramento educacional e máxima eficiência energética.
-        </p>
-      </div>
+        <div id="iot-section" class="bg-surface section-padding">
+          <div class="container">
+            <div class="section-heading text-center reveal">
+              <span class="eyebrow">Monitoramento em Tempo Real</span>
+              <h2>Monitoramento digital com <strong>ESP8266</strong></h2>
+              <p>
+                Além do controle automático, o sistema possui um sensor de temperatura integrado a um microcontrolador
+                ESP8266 para monitoramento em tempo real e fins didáticos.
+              </p>
+            </div>
 
-      <div class="container section-padding">
-        <div class="text-center reveal">
-          <h2>Por que o aquecimento é passivo?</h2>
-          <p class="funcionamento-text">
-            A <strong>circulação de água</strong> é 100% natural e não depende de bombas elétricas. Ela ocorre
-            pela diferença de densidade entre a água quente e fria, um princípio físico chamado
-            <strong>termossifão</strong>. Mesmo em caso de queda de energia, o sistema continua aquecendo
-            normalmente. A eletricidade é usada apenas para <strong>controle de segurança</strong>
-            (proteção térmica) e <strong>monitoramento</strong> (telemetria), não para o aquecimento em si.
-          </p>
-          <a href="#bento-features" class="btn-primary">Ver todos os benefícios</a>
+            <div class="info-grid reveal delay-1">
+              <div class="info-card highlight-card delay-1">
+                <i class="fa-solid fa-thermometer"></i>
+                <h4>Sensor de Temperatura</h4>
+                <p>Um sensor posicionado no cano monitora a temperatura da água quente em tempo real, fornecendo os
+                  dados
+                  necessários para o acompanhamento do sistema.</p>
+              </div>
+
+              <div class="info-card highlight-card delay-2">
+                <i class="fa-solid fa-microchip"></i>
+                <h4>Microcontrolador ESP8266</h4>
+                <p>Recebe os dados do sensor e processa as informações, controlando o display responsável pela exibição
+                  local das medições.</p>
+              </div>
+
+              <div class="info-card highlight-card delay-3">
+                <i class="fa-solid fa-display"></i>
+                <h4>Display em Tempo Real</h4>
+                <p>Painel visual que exibe continuamente a temperatura da água quente, permitindo acompanhar o
+                  funcionamento do sistema de aquecimento em qualquer momento.</p>
+              </div>
+
+              <div class="info-card highlight-card delay-4">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h4>Laboratório Didático</h4>
+                <p>Transforma a instalação em uma ferramenta educacional prática, permitindo que alunos observem a
+                  energia
+                  renovável em ação e compreendam o monitoramento de sistemas térmicos.</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+
+        <div class="text-center reveal" style="margin-top: 50px;">
+          <p class="funcionamento-text">
+            <strong>Importante:</strong> Enquanto o aquecimento solar funciona 100% de forma passiva, o controlador
+            automático e o sistema de medição da temperatura utilizam eletricidade de baixíssimo consumo. Essa
+            combinação
+            garante segurança, monitoramento educacional e máxima eficiência energética.
+          </p>
+        </div>
+
+        <div class="container section-padding">
+          <div class="text-center reveal">
+            <h2>Por que o aquecimento é passivo?</h2>
+            <p class="funcionamento-text">
+              A <strong>circulação de água</strong> é 100% natural e não depende de bombas elétricas, ocorrendo pelo
+              princípio do
+              <strong>termossifão</strong>. A eletricidade é usada no dia a dia apenas para o <strong>controle de
+                segurança</strong>
+              (proteção térmica) e <strong>telemetria</strong>. Caso ocorra uma ausência prolongada de sol, o
+              controlador
+              gerencia de forma
+              inteligente o acionamento da <strong>resistência elétrica de backup</strong>, unindo máxima
+              sustentabilidade
+              e confiabilidade no abastecimento.
+            </p>
+            <a href="#bento-features" class="btn-primary">Ver todos os benefícios</a>
+          </div>
+        </div>
     </section>
 
     <!-- BENEFÍCIOS -->

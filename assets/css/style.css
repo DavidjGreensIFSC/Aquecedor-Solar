@@ -944,6 +944,10 @@ body.scrolled .top-bar {
   transition-delay: 0.7s;
 }
 
+.delay-4 {
+  transition-delay: 0.9s;
+}
+
 /* ========================= RESPONSIVIDADE ========================= */
 
 @media (max-width: 992px) {
